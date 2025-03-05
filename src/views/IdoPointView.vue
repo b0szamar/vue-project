@@ -61,7 +61,7 @@
 import { ref, onMounted, computed } from 'vue'
 import axios from 'axios'
 import router from '@/router'
-import { Toast } from 'bootstrap'
+
 const selectedDate = ref('')
 const selectedTime = ref('')
 const bookedAppointments = ref([])
@@ -70,7 +70,7 @@ const error = ref(null)
 const allPossibleTimes = [
     '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'
 ]
-const toast = useToast();
+
 const availableTimes = computed(() => {
     if (!selectedDate.value) return []
 
