@@ -15,6 +15,11 @@ const router = createRouter({
 
       component: () => import('../views/IdoPointView.vue'),
     },
+    {
+      path: '/adatok',
+      name: 'adatok',
+      component: () => import('../views/AdatokView.vue'),
+    }
   ],
 })
 
