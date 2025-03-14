@@ -1,6 +1,6 @@
 <template>
     <div class="container text-center">
-      <h1 class="mt-5 mb-4">Üdvözöllek a Turbo Fodrásznál!</h1>
+      <h1 class="mt-5 mb-4">Üdvözöllek a fodrásznál!</h1>
       <button @click="goToAppointments" class="btn btn-primary btn-lg">Foglalj időpontot</button>
     </div>
   </template>

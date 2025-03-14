@@ -5,7 +5,7 @@
       <div v-if="error" class="alert alert-danger">{{ error }}</div>
       <form @submit.prevent="submitForm">
         <div class="form-group mb-3">
-          <label for="nev">Név</label>
+          <label for="nev" id="nev">Név</label>
           <input type="text" id="nev" v-model="nev" class="form-control" required />
           <div v-if="errors.nev" class="text-danger">{{ errors.nev }}</div>
         </div>

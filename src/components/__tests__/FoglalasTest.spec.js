@@ -6,6 +6,7 @@ import HomeView from '@/views/HomeView.vue'
 import { useIdoStore } from '@/stores/ido'
 import { createPinia, setActivePinia } from 'pinia'
 
+
 describe('Oldalteszt', () => {
   beforeEach(() => {
     setActivePinia(createPinia())
@@ -22,6 +23,15 @@ describe('Oldalteszt', () => {
   })
   it('Betölt a kezdő oldal', () => {
     const wrapper = mount(HomeView)
-    expect(wrapper.text()).toContain('Üdvözöllek a Turbo Fodrásznál!')
+    expect(wrapper.text()).toContain('Üdvözöllek a fodrásznál!')
+  })
+  it('Check username input field', async () => {
+    const wrapper = mount(AdatokView)
+    const nameInput = wrapper.find("input#nev")  
+    await nameInput.setValue("Marci")
+    expect(nameInput.element.value).toBe("Marci") 
   })
 })
+
+
+
