@@ -30,6 +30,12 @@ describe('Oldalteszt', () => {
     await nameInput.setValue("Marci")
     expect(nameInput.element.value).toBe("Marci") 
   })
+  it('Check phone input field', async () => {
+    const wrapper = mount(AdatokView)
+    const phoneInput = wrapper.find("input#nev")  
+    await phoneInput.setValue("+36305304361")
+    expect(phoneInput.element.value).toBe("+36305304361") 
+  })
 })
 
 

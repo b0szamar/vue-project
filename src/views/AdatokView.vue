@@ -28,7 +28,8 @@
   import { ref, onMounted } from 'vue';
   import axios from 'axios';
   import 'bootstrap/dist/css/bootstrap.min.css';
-  
+  import { useToast } from 'vue-toastification';
+  const toast=useToast();
   const nev = ref('');
   const telefonszam = ref('');
   const error = ref(null);
@@ -49,7 +50,11 @@
     if (!nev.value.trim()) errors.value.nev = 'A név megadása kötelező!';
     if (!telefonszam.value.trim()) errors.value.telefonszam = 'A telefonszám megadása kötelező!';
     else if (!/^\+36\d{9}$/.test(telefonszam.value))
+    {
       errors.value.telefonszam = 'Érvénytelen telefonszám formátum! (pl: +36301234567)';
+    toast.error("Érvénytelen telefonszám formátum! (pl: +36301234567)")
+    }
+
     return Object.keys(errors.value).length === 0;
   };
   
