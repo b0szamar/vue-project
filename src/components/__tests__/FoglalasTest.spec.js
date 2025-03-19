@@ -3,7 +3,6 @@ import { mount } from '@vue/test-utils'
 import IdoPointView from '@/views/IdoPointView.vue'
 import AdatokView from '@/views/AdatokView.vue'
 import HomeView from '@/views/HomeView.vue'
-import { useIdoStore } from '@/stores/ido'
 import { createPinia, setActivePinia } from 'pinia'
 
 

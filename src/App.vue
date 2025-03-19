@@ -13,11 +13,6 @@ header {
   max-height: 100vh;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
 nav {
   width: 100%;
   font-size: 12px;
@@ -50,10 +45,6 @@ nav a:first-of-type {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
   header .wrapper {
     display: flex;
     place-items: flex-start;
@@ -69,4 +60,5 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
+
 </style>

@@ -4,7 +4,6 @@
       <button @click="goToAppointments" class="btn btn-primary btn-lg">Foglalj időpontot</button>
     </div>
   </template>
-  
   <script>
   import { onMounted } from 'vue';
   import { useToast } from 'vue-toastification';
